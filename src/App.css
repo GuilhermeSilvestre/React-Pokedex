@@ -1,38 +1,78 @@
-.App {
+@font-face {
+  font-family: "PokemonSolid";
+  src: url("./fonts/Pokemon_Solid.ttf") format("truetype");
+}
+
+body {
+  font-family: "PokemonSolid", sans-serif;
+  background-color: #8d3434; /* Fundo vermelho */
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "PokemonSolid", sans-serif;
+  color: #e3f025; /* Cor do texto */
+  text-shadow: -2px -2px 0 #388abd, 2px -2px 0 #388abd, -2px 2px 0 #388abd,
+    1px 1px 0 #388abd; /* Largura e cor da borda */
+}
+
+.container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button {
+  padding: 10px 20px;
+  background-color: #ff5555; /* Cor de fundo do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3333; /* Cor de fundo do botão ao passar o mouse */
+}
+button:active {
+  background-color: #4b3131; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.inputPoke {
+  width: 240px;
+  margin: 10px;
+}
+@media (max-width: 780px) {
+  .inputPoke {
+    margin: 5px;
+    width: 200px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+p {
+  color: aliceblue;
 }
 
-.App-link {
-  color: #61dafb;
+.pokeName {
+  font-family: "PokemonSolid", sans-serif;
+  color: #e3f025;
+  text-shadow: -1px -1px 0 #388abd, 1px -1px 0 #388abd, -1px 1px 0 #388abd,
+    1px 1px 0 #388abd;
+  font-size: 1.4em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pokestatus {
+  margin: 0px;
+  padding: 0px;
 }
