@@ -23,9 +23,10 @@ function App() {
 
   //Carregando informação da API
   const fetchData = async (pokeNameORNumber) => {
-    if (typeof pokeNameORNumber == String) {
+    if (typeof pokeNameORNumber == "string") {
       pokeNameORNumber = pokeNameORNumber.toLowerCase();
     }
+    console.log(typeof pokeNameORNumber);
 
     try {
       const response = await axios.get(
