@@ -22,10 +22,21 @@ export default (props) => {
     setShow(!show);
   }
 
+  const handleButtonRight = () => {
+    props.function(id + 1);
+  };
+  const handleButtonLeft = () => {
+    if (id >= 2) props.function(id - 1);
+  };
+
   return (
     <>
       {show ? (
         <div className="pokestatus">
+          <div className="botoes">
+            <button onClick={handleButtonLeft}>◄</button>
+            <button onClick={handleButtonRight}>►</button>
+          </div>
           <img src={image} alt={name}></img>
           <p className="pokeName">{name.toUpperCase()}</p>
           <p>Número: {id} </p>

@@ -76,3 +76,11 @@ p {
   margin: 0px;
   padding: 0px;
 }
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+}
+.botoes button {
+  margin-right: 10px;
+}

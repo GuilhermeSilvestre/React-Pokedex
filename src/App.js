@@ -23,7 +23,10 @@ function App() {
 
   //Carregando informação da API
   const fetchData = async (pokeNameORNumber) => {
-    pokeNameORNumber = pokeNameORNumber.toLowerCase();
+    if (typeof pokeNameORNumber == String) {
+      pokeNameORNumber = pokeNameORNumber.toLowerCase();
+    }
+
     try {
       const response = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${pokeNameORNumber}`
@@ -76,6 +79,7 @@ function App() {
     <>
       <div className="container">
         <h1>P O K E D E X</h1>
+
         <input
           className="inputPoke"
           value={pokemon}
@@ -85,6 +89,7 @@ function App() {
         />
         <button onClick={handleButtonClick}>GO</button>
         <p>by TuRtLeDz</p>
+
         {id && name ? (
           <>
             <Exibirpokemon
@@ -95,6 +100,7 @@ function App() {
               weight={weight}
               image={image}
               show={show}
+              function={fetchData}
             />
           </>
         ) : null}
