@@ -23,6 +23,7 @@ function App() {
 
   //Carregando informação da API
   const fetchData = async (pokeNameORNumber) => {
+    pokeNameORNumber = pokeNameORNumber.toLowerCase();
     try {
       const response = await axios.get(
         `https://pokeapi.co/api/v2/pokemon/${pokeNameORNumber}`
